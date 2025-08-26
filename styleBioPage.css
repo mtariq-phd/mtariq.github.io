@@ -3,10 +3,249 @@
 }
 
 body {
-  /** margin: 0;
+  margin: 0;
   font-family: sans-serif;
-  background: #f5f6f7;
-  **/
+  background: rgb(167, 229, 246);/*#0f85b4;*/
+}
+
+/* Container for full page */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;/* Allow horizontal scrolling on whole page */
+  min-width: 100vw;/* Prevent automatic shrinking */
+  font-family: sans-serif;
+  background: rgb(167, 229, 246);
+}
+
+/* Top intro section fills width with max limits */
+.full-width-box {
+  max-width: 1200px; /* max width for readability */
+  min-width: 600px;  /* minimum width to avoid too small */
+  width: 90vw;       /* responsive width relative to viewport */
+  margin: 20px auto; /* centers horizontally */
+  padding: 50px;
+  border: 4px solid black;
+  box-shadow:
+    3px 0 black,
+    -3px 0 black,
+    0 3px black,
+    0 -3px black,
+    2px 2px black,
+    -2px -2px black;
+  border-radius: 8px;
+  background-color: rgb(167, 229, 246);
+}
+
+/* Skills container below intro for padding and layout 
+- centered flexbox with horizontal overflow */
+
+.skills, .techExp {
+  display: flex;
+  gap: 40px;
+  /*width: 90vw;               /* Match intro width */
+  max-width: 1200px;         /* Match max width */
+  min-width: 600px;          /* Match min width */
+  margin: 20px auto;         /* Center horizontally */
+  padding: 1em 20px;/*0 10px;           /* Added horizontal padding as buffer */
+  overflow-x: auto;          /* Horizontal scrollbar if narrow */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  justify-content: center;   /* Center flex children internally */
+  /*min-width: max-content; /* allow it to grow and overflow horizontally if needed */
+    /* Make sure it fills fieldset width minus padding */
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+
+}
+
+.skills-section, .techExp-section {
+  flex: 1;/* 1 0;*/
+  /*box-sizing: border-box;    /* Keep padding inside width */
+  min-width: 280px;          /* Minimum width for readability (changed from 300px) */
+  /* Calculate width: half container minus half gap */
+  width: calc((100% - 40px) / 2);   /* Added calc() - new */
+  /* background: rgb(220, 240, 250);*/
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  background-color: rgb(167, 229, 246);
+}
+
+.skills-section:nth-child(1) {
+  background-color: rgb(100, 200, 200);
+}
+
+.skills-section:nth-child(2) {
+  background-color: rgb(100, 200, 200);
+}
+
+.techExp-section:nth-child(1) {
+  background-color: rgb(100, 200, 200);
+}
+
+.techExp-section:nth-child(2) {
+  background-color: rgb(100, 200, 200);
+}
+
+.skills-fieldset, .techExp-fieldset {
+  border: 3px solid black;
+  /*padding: 1.5em 1em 1em; /* top padding extra to avoid overlap */
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 90vw;
+  min-width: 600px;
+  border-radius: 8px;
+  /*background-color: rgb(220, 240, 250);*/
+  background-color: rgb(167, 229, 246);
+  /* Reduce or eliminate padding here */
+  padding: 0; 
+  /* Apply overflow hidden to force container to wrap children correctly */
+  overflow: hidden;
+}
+
+/* Style the legend to appear "cut out" from border */
+.skills-legend, .techExp-legend {
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: darkblue;
+  /* Background matches fieldset, so border won’t show behind text */
+  background-color: rgb(167, 229, 246);
+  margin-left: 2em; /* indent from left */
+  border-radius: 4px;
+  width: auto;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.techExp {
+  background-color: rgb(167, 229, 246);
+  width: 500px;
+  padding: 50px;
+  margin: 20px auto;
+}
+
+.contact {
+  background-color: rgb(167, 229, 246);
+  width: 500px;
+  padding: 50px;
+  margin: 20px auto;
+}
+
+.common-text {
+  font-family: Arial, sans-serif;/* Font  */
+  color: darkblue;/* Font color */
+  line-height: 1.5;
+  font-size: 18px;      /* Font size */
+}
+
+.size-large {
+  font-size: 24px;
+}
+
+.size-med{
+  font-size: 20px;
+}
+
+.size-small {
+  font-size: 12px;
+}
+
+.color-primary {
+  color: darkblue;
+}
+
+.color-secondary {
+  color: #007bff;
+}
+
+    .section {
+      margin-bottom: 2em;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .section img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    
+.tech-skills {
+  list-style: none; /* Remove default bullets */
+  padding-left: 1.8em; /* space for bullet icons */
+}
+
+.tech-skills li {
+  position: relative;
+  margin-bottom: 0.8em;
+  padding-left: 2.5em; /*space between icon and text */
+}
+
+/* Common styles for bullet icons */
+.tech-skills li::before {
+  content: "";
+  position: absolute;
+  left: 0em;  /* Moves icon closer to the text container edge */
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+/* Different bullet icons by nth-child */
+.tech-skills li:nth-child(1)::before {
+  background-image: url('./images/prog-icon.png');
+  /*<a href="https://iconscout.com/icons/software-programming" class="text-underline font-size-sm" target="_blank">Software Programming</a> by <a href="https://iconscout.com/contributors/pro-symbols" class="text-underline font-size-sm" target="_blank">Prosymbols</a>*/
+}
+tech-skills li:nth-child(2)::before {
+  background-image: url('images/medical-icon.png');
+}
+tech-skills li:nth-child(3)::before {
+  background-image: url('images/git-icon.png');
+}
+tech-skillsli:nth-child(4)::before {
+  background-image: url('images/data-icon.png');
+}
+tech-skills li:nth-child(5)::before {
+  background-image: url('images/ml-icon.png');
+}
+
+/* Separate icons style classes for techExp (you can overwrite) */
+.pd-exp {
+  list-style: none; /* Remove default bullets */
+  padding-left: 1.8em;
+}
+
+.pd-expli {
+  position: relative;
+  margin-bottom: 0.8em;
+  padding-left: 2.5em;
+}
+
+.pd-exp li::before {
+  content: "";
+  position: absolute;
+  left: 0em;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  background-image: url('./images/your-techExp-icon.png'); /* default icon */
+}
+
+/* You can define special nth-child icons similarly for techExp */
+
+/* research ul */
+.research {
+  list-style: disc inside;
+  padding-left: 1.8em;
+  font-size: 12px;
 }
 
 .header {
