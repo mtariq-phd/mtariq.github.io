@@ -1,128 +1,114 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
-  <link href="./styleBioPage.css" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maira Tariq - Developer Portfolio</title>
+<link rel="stylesheet" href="styleBioPage.css" />
 </head>
 <body>
 
-  <div class="full-width-box">
-    <h1 class="common-text size-large color-primary">About Me</h1>
-    <p class="common-text size-small color-secondary">Thank you for visiting my page!
-      <br>I’m a passionate imaging scientist who loves diving deep into quantitative analysis and getting hands-on with software and algorithm development — whether it’s in academia or the industry. I’m all about cracking tough data puzzles, building smart models, and crafting clever algorithms. Managing projects and clinical research? Yep, that’s my jam too.
-<br>
-<br>
-What really gets me fired up is solving tricky problems with a bit of critical thinking and using advanced analytics to tackle healthcare challenges. Right now, I’m excited to take my expertise further by diving into data science and web/app — always learning, growing, and pushing the boundaries of what data can do.
-<br>
-<!--<br>
-In short, I’m here to turn complex data into clear insights that can make a real difference!</p>-->
-    <br>
-    <img src="" alt="Profile Photo">
+<header class="full-width-box">
+  <h1>Maira Tariq</h1>
+  <p class="size-med color-primary">Imaging Scientist Transitioning to Web Development</p>
+  <nav>
+    <a href="#about">About Me</a> |
+    <a href="#why-course">Why This Course</a> |
+    <a href="#learned">What I’ve Learned</a> |
+    <a href="#showcase">Skill Showcase</a> |
+    <a href="#blog">Blog & Extras</a> |
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <h1 class="common-text size-large color-primary">Get in touch!</h1>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-      <a href="mailto:maira_tariq@icloud.com" title="Send Email" style="font-size:24px; margin-right:15px;margin-left:15px;">
-      <i class="fas fa-envelope"></i>
-      </a>
+<main>
 
-      <a href="https://www.linkedin.com/in/mtariqphd/" target="_blank" rel="noopener noreferrer" title="Visit LinkedIn Profile" style="font-size:24px;">
-  <i class="fab fa-linkedin"></i>
-      </a>
-  </div>
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>Thank you for visiting my page!</p>
+  <p>I’m a passionate imaging scientist who loves diving deep into quantitative analysis and getting hands-on with software and algorithm development — whether it’s in academia or the industry. I’m all about cracking tough data puzzles, building smart models, and crafting clever algorithms.</p>
+  <p>What really gets me fired up is solving tricky problems with a bit of critical thinking and using advanced analytics to tackle healthcare challenges. Right now, I’m excited to take my expertise further by diving into data science and web/app development.</p>
+</section>
 
-  <fieldset class="skills-fieldset">
-  <legend class="skills-legend">Skills</legend>
-  <div class="skills">
-    <div class="skills-section">
-      <h2 class="common-text size-med color-secondary">Technical</h2>
-      <ul class="tech-skills size-small">
-        <li><strong>Programming:</strong> Python, MATLAB, C/C++, Java, R, JavaScript, Bash/Shell Scripting.</li>
-        <li><strong>Medical Imaging:</strong> image segmentation & registration, quantitative MRI analysis.</li>
-        <li><strong>Software Tools:</strong> Git, SVN, Eclipse, Visual Studio, MySQL.</li>
-        <li><strong>Data Analysis & Visualisation:</strong> Statistical analysis, data reporting, technical presentations.</li>
-        <li><strong>Machine Learning & Data Science:</strong> data preprocessing, feature extraction, model evaluation.</li>
-      </ul>
+<section id="why-course" class="section color-secondary">
+  <h2>Why I Want to Pursue This Course</h2>
+  <blockquote>
+    <p>I have in-depth knowledge and experience in software development and engineering concepts, but I want to update my skills to popular languages like JavaScript, and start creating personal development projects including developing apps and gain practical data science experience using real data and challenges.</p>
+    <p>This course will empower me to build modern applications and push my career and personal growth forward.</p>
+  </blockquote>
+</section>
+
+<section id="learned" class="section">
+  <h2>What I Have Learned So Far</h2>
+  <p>Through prompt-based learning using AI tools such as Perplexity.ai, and solving programming challenges on Codewars supported by AI and MDN documentation, I have enhanced my problem-solving skills significantly.</p>
+  <button id="showcaseBtn">See Detailed Showcase</button>
+</section>
+
+<section id="showcase" class="section techExp">
+  <h2>Detailed Skills & Features Showcase</h2>
+
+  <article>
+    <h3>AI-Powered Prompt Learning</h3>
+    <p>I use AI-driven prompting to accelerate learning and understand complex concepts interactively.</p>
+    <div id="ai-prompt-demo" style="background:#e0f7fa; padding:1em; border-radius:8px;">
+      <label for="userPrompt">Ask me anything: </label>
+      <input type="text" id="userPrompt" placeholder="Type a programming question..." />
+      <button onclick="handlePrompt()">Submit</button>
+      <div id="promptResponse" style="margin-top: 10px; font-style: italic;"></div>
     </div>
-  
-    <div class="skills-section">
-      <h3 class="common-text size-med color-secondary">Scientific research</h3>
-      <ul class="research size-small">
-        <li>Expertise in critical review of scientific literature.</li>
-        <li>Accomplished in planning and carrying out scientific experiments and evaluating the findings.</li>
-        <li>Skilled in presentation of scientific data through technical reports, verbal communication and oral presentations.</li>
-        <li>Experience working with medical imaging database (XNAT), and standardized medical imaging formats (DICOM, NIFTI).</li>
-      </ul>
-    </div>
-  </div>
-  </fieldset>
- <!--
-  <div class="skills">
-    <h1 class="common-text size-large color-primary">Skills</h1>
-      <h2 class="common-text size-med color-secondary">Technical</h2>
-        <ul class="tech-skills size-small">
-           <img src="images/cs-icon.png" alt="CS" style="width:16px; vertical-align:middle; margin-right:6px;"> 
-          <li><strong>Programming:</strong> Python, MATLAB, C/C++, Java, R, JavaScript, Bash/Shell Scripting.
-          <li><strong>Medical Imaging:</strong> image segmentation & registration, quantitative MRI analysis.
-          <li><strong>Software Tools:</strong> Git, SVN, Eclipse, Visual Studio, MySQL.
-          <li></trong>Data Analysis & Visualisation:</strong> Statistical analysis, data reporting, technical presentations.
-          <li><strong>Machine Learning & Data Science:</strong> data preprocessing, feature extraction, model evaluation.
-        </ul>
-      <h3 class="common-text size-med color-secondary">Scientific research</h3>
-        <ul class="research size-small">
-          <li> Expertise in critical review of scientific literature.
-          <li> Accomplished in planning and carrying out scientific experiments and evaluating the findings.
-          <li> Skilled in presentation of scientific data through technical reports, verbal communication and
-oral presentations.
-          <li> Experience of working with medical imaging database (XNAT), and standardised medical
-imaging formats (DICOM, NIFTI)
-        </ul>
-  </div>
-  -->
+  </article>
 
-  <fieldset class="techExp-fieldset">
-  <legend class="techExp-legend">Technical Experience</legend>
-  
-  <div class="techExp">
-    <div class="techExp-section">
-      <h2 class="common-text size-med color-secondary">Postdoctoral research</h2>
-      <ul class="pd-exp size-small">
-        <li>Led design and evaluation of imaging biomarkers Magnetic Resonance Imaging </li>
-        <li>Integrated advanced image processing and quantitative analysis in human and phantom studies.</li>
-        <li>Collaborated in multi-disciplinary teams driving clinical imaging research</li>
-        <li></li>
-      </ul>
-    </div>
-  
-    <div class="techExp-section">
-      <h3 class="common-text size-med color-secondary">Software Development</h3>
-      <ul class="cs-exp size-small">
-        <li>Developed and debugged video processing applications incorporating machine learning-driven
-object tracking and background removal algorithms.</li>
-        <li>R&D in novel computer vision solutions for a video based social media application.</li>
-        <li></li>
-        <li></li>    
-      </ul>
-    </div>
-  </div>
-  </fieldset>
+  <article>
+    <h3>Codewars Problem Solving</h3>
+    <p>Here are some challenges I have completed:</p>
+    <pre><code>// Example: Find unique string in array
+function findUniq(arr) {
+  const normalize = str =&gt; [...new Set(str.toLowerCase().replace(/\s+/g, '').split(''))].sort().join('');
+  const signatures = arr.map(normalize);
+  for(let i=0;i&lt;signatures.length;i++) {
+    if(signatures.indexOf(signatures[i]) === signatures.lastIndexOf(signatures[i])) return arr[i];
+  }
+}</code></pre>
+  </article>
 
-  <div class="full-width-box">
-  <h1>Coming soon ... </h1>
-  <h2>A surprise section </h2>
-     <!-- have a section with a rnadom "bad" joke generator -> have
-      an animation of a cracker opening with a click and hold,
-      then joke is revealed along with some confetti-->
-  </div>
+  <article>
+    <h3>Real-Time Data Fetch & Filtration Demo</h3>
+    <input type="text" id="filterInput" placeholder="Type to filter fruits..." />
+    <ul id="fruitList">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Orange</li>
+      <li>Mango</li>
+      <li>Strawberry</li>
+      <li>Grapes</li>
+    </ul>
+  </article>
 
-  <!-- 
-  <div class="contact">
-    <h2 class="common-text size-large color-primary">Contact</h2>
-    <p class="common-text size-small color-secondary">Get in touch:  email or LinkedIn.</p>
-    <img src="https://via.placeholder.com/150x100?text=Contact+Me" alt="Contact Me">
-  </div>
-  -->
+  <article>
+    <h3>Planned Features</h3>
+    <ul>
+      <li>Regular blog posts with insights and updates</li>
+      <li>Random joke generator for fun interaction</li>
+      <li>Animated page elements to improve user engagement</li>
+    </ul>
+  </article>
+</section>
+
+<section id="blog" class="section">
+  <h2>Blog & Extras</h2>
+  <button id="jokeBtn">Tell me a bad joke</button>
+  <p id="jokeDisplay" style="margin-top: 1em; font-style: italic;"></p>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact & GitHub</h2>
+  <p>You can view the source code for this website on <a href="https://github.com/mtariq-phd/" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+  <p>Feel free to reach out: <a href="mailto:maira_tariq@icloud.com">here</a></p>
+</section>
+
+</main>
+
+<script src="site.js"></script>
 
 </body>
 </html>
