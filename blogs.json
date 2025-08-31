@@ -1,20 +1,27 @@
 [
   {
+    "id": 4,
+    "title": "Enhancing Pixel Panic and webpage user experience (UX)",
+    "date": "2025-08-31",
+    "content": "<p>In this latest update, I focused on significantly improving both the Pixel Panic game and my personal profile webpage.</p><p>For the webpage, I enhanced the overall look by refining the layout to be more visually appealing and ensuring it is responsive to user interactions such as hovers and clicks. I also enriched the site content by adding images showcasing the game, established a blog section where I began publishing regular development updates, and created an image gallery to better present the game's features.</p><p>Regarding Pixel Panic, I implemented a scoring system allowing players to earn points by catching stars, which adds a rewarding dynamic to the gameplay. The game's visuals were upgraded with new icons and a more vibrant color scheme, giving it a polished, engaging appearance. A lot of debugging went into fine-tuning the logic, especially to accurately detect when players catch stars to score points, ensuring a smooth and bug-free player experience.</p><p>Despite these advancements, some planned features, specifically on the webpage remain incomplete due to limited development time, notably the integration of an AI agent to bring advanced interactions and functionalities. I aim to revisit these in future updates.</p>"
+  },
+  {
     "id": 3,
-    "title": "Making the game better!",
-    "date": "2025-08-30",
-    "content": "<p>This is the full content of the latest blog post.</p>"
+    "title": "Improving Pixel Panic and deploying the webpage!",
+    "date": "2025-08-29",
+    "content": "<p>This blog post discusses the steps and ideas behind refining the core gameplay of Pixel Panic, enhancing both challenge and fun.</p><p>I played around a lot with the logic for the \"pixels\" in the game play, specifically how frequently they appear and how to deduct lives when collision happens!</p><p>I also spent a fair bit of time researching how to deploy my webpage, as I still haven't figure out how to do that on GitHub website.</p>"
   },
   {
     "id": 2,
-    "title": "Fetching data with HTML, CSS and vanilla JavaScript only",
+    "title": "Fetching data with HTML, CSS and vanilla JavaScript",
     "date": "2025-08-25",
-    "content": "<p>Details of an older blog post.</p>"
+    "content": "<p>For the last few days, I have been exploring techniques on how to fetch and integrate data into a webpage using only HTML, CSS, and native JavaScript, without relying on any frameworks.</p><p>In short I haven't been very successful!</p><p>So, for now, the planned \"search events\" and prompt based AI searching that i wanted to integrate into the webpage, is non-functional.</p>"
   },
   {
     "id": 1,
     "title": "Creating the game and webpage",
     "date": "2025-08-20",
-    "content": "<p>Content for oldest blog.</p>"
+    "content": "<p>This initial blog chronicles the journey of beginning the Pixel Panic game development and setting up the corresponding webpage.</p><p>I have been doign the suggested projects on freeCodeCamp and also doing challenges on Codeware, but starting from scratch for the webpage and the game was very hard!</p><p>Started the webpage by playing around with the styling, but content was all over the place!</p>"
   }
 ]
+

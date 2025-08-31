@@ -132,7 +132,7 @@ function findUniq(arr) {
   </article>
 
    <article>
-    <h3>Pixel Panic: obstacle avoidanve game</h3>
+    <h3>Pixel Panic: obstacle avoidance game</h3>
     <p><em>Pixel Panic</em> is a charmingly simple yet surprisingly addictive obstacle avoidance game where you steer a tiny pixel block left and right to dodge a relentless barrage of falling obstacles. Starting with 5 lives, the challenge ramps up across three levels as the swarm grows denser and speeds pick up, testing your reflexes and nerves. With its retro pixel vibe and no-nonsense mechanics, it’s the perfect quick fix for a burst of casual gaming fun—easy to pick up, tough to put down, and guaranteed to send your heart racing in the best pixelated panic.</p>
     <div class="image-row">
       <figure>
@@ -153,39 +153,33 @@ function findUniq(arr) {
 
       <ul id="game-features">
         <li>Player movement (left/right with Arrow keys).</li>
-        <li>Obstacles fall from the top at increasing frequency & speed.</li>
-        <li>ALives system (5 hearts) disappears when hit; collision causes temporary fade effect.</li>
-        <li>3 Levels:
-          <ul>
-            </li>Level 1: slower obstacles, fewer spawns.</li>
-            </li>Level 2: more spawns.</li>
-            </li>Level 3: faster obstacles.</li>
-          </ul>
-        </li>
-         <li>Game Over condition when lives reach 0.</li>
-        <li>Transition messages between levels.</li>
+        <li>Obstacles (pixels) fall from the top at increasing frequency & speed.</li>
+        <li>A lives system (5 hearts) disappears when hit; collision causes a live lost.</li>
+        <li>3 Levels: increasing levels become harder with more pixels spawned and the speed of appearance increasing!</li>
+        <li>Game Over when lives reach 0.</li>
+        <li>Collectible stars to score points.</li>
+        <li>Score counted (points based on survival &/or collected stars).</li>
     </ul>
 
-    <h4>Featsure to add</h4>
+    <h4>Features to add</h4>
     <ul id="game-features-to-add">
-      <li>Add score counter (points based on survival or collected stars).</li>
-      <li>Add gems/stars collectible with ArrowUp.</li>
-      <li>Add Leader board / High score using localStorage.</li>
+      <li>Add Leader board / High score using local storage.</li>
       <li>Add Restart button after Game Over.</li>
+      <li>Improve UX by addind sounds at collisions, game over and game won.</li>
+      <li>Add a "shaking" panic effect when pixels collide with the player.</li>
+      <li>Add "up" arrow function to collect extra lives, which also appear in the game.</li>
+      <li>More levels, with shorter intervals, but higher speed!</li>
     </ul>
   </article>
 
   <article>
-    <h3>Planned Webpage additions and featsures</h3>
+    <h3>Planned Webpage additions</h3>
     <ul>
-      <li>Improve the game - work on it to make it more fun! Ask gamers in know!</li>
-      </li>Regular blog posts with insights and updates
+      <li>Regular blog posts with insights and updates.</li>
       <ul>
-            <li>Start writing some text on daily updates.</li>
             <li>Learn how to format blogs, including display, archiving old ones and putting latest one on main page.</li>
       </ul>
       <li>Add the real-time data fetch section with events "nearby". use typical websites (e.g. look for local council/events pages), but also general google search.</li>
-      <li>Improve the structure of the page - make it more effective, but keep simple & effective!</li>
       <li>Improve the icons and graphics - start with linking to freely available ones, if have time, try to draw!</li>
       <li>Include more complex examples in the showacse for AI based learning</li>
       <li>Showcase/host the webpage, rather than jsut have the source code appear.</li>
@@ -193,16 +187,23 @@ function findUniq(arr) {
         <ul>
           <li>AI based may require some additional prompts (see <a href="https://www.turing.ac.uk/blog/we-asked-chatgpt-create-some-christmas-cracker-jokes-heres-what-happened" target="_blank" rel="noopener noreferrer">this blog</a> from the Alan Turing Institute)</li>
           <li><strong>BUT</strong>, might be able to use a pre-trained AI model & give some prompts for this (keep a list of previous jokes) - MAYBE!</li>
+          <li>For now, gave a promp-based AI some exmaple <em>bad</em> jokes and asksed it to fetch simialr ones from the web. Finally, i asked it to generate similar ones, using the exmaples found.</li>
         </ul>
-      <li>Improve the look of the page by creating advanced CSS elements.</li>
-      <li>Animated page elements to improve user engagement</li>
     </ul>
   </article>
 </section>
 
 <section id="blog-section" class="section">
   <h2>Blog - making web pages and apps!</h2>
-  <article id="currentBlog" tabindex="0" aria-live="polite" style="margin-bottom: 1.5em;"></article>
+  
+  <article id="currentBlog" tabindex="0" aria-live="polite" style="margin-bottom: 2em; border-bottom: 2px solid #ccc; padding-bottom: 1em;">
+    <div class="blog-title-container">
+      <h3 style="margin: 0; display: inline;">Current Blog Title</h3>
+      <span class="blog-date" style="font-size: 0.8em; color: #666; margin-left: 0.5em;">Aug 31, 2025</span>
+    </div>
+    <!-- blog content here -->
+  </article>
+  
   <div>
     <h3>Older Posts</h3>
     <ul id="olderBlogsList" aria-label="List of older blog posts" tabindex="0" style="list-style: none; padding-left: 0;"></ul>
@@ -216,11 +217,12 @@ function findUniq(arr) {
   </div>
 </section>
 
+
 <section id="extras" class="section">
   <h2>Extras</h2>
   
   <!-- search engine -->
-  <h3>Search Events</h3>
+  <h3>Search Events <em>(Not working)</em></h3>
   <input type="text" id="eventTypeInput" placeholder="Type events like outdoor family activities, cinema, market ..." aria-label="Event Type Keywords" />
   
   <select id="locationSelect" aria-label="Select location">
@@ -237,11 +239,14 @@ function findUniq(arr) {
 
   <!-- Random code generator -->
   <h3>Click to hear a <strong>bad</strong> joke</h3>
-  <button id="jokeBtn">Tell me a bad joke</button>
-  <p id="jokeDisplay" style="margin-top: 1em; font-style: italic;"></p>
-
+  <!-- A styled joke container for readability and visual appeal -->
+  <div id="jokeContainer" class="joke-container" tabindex="0" aria-live="polite" aria-atomic="true">
+    <p id="jokeDisplay" class="joke-text">Click the button for a joke!</p>
+  </div>
+  <button id="jokeBtn" class="joke-btn" aria-label="Get a random joke">Tell me a joke</button>
+ 
     <!-- Gallery of my travel pictures -->
-  <h3>Some travel pictures</h3>
+  <h3>My travel photos gallery!</h3>
   <div id="gallery">
   </div>
 

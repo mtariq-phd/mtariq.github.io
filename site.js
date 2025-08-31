@@ -149,17 +149,53 @@ searchButton.addEventListener('click', searchEvents);
 // Optionally trigger search on page load to show all today's events
 window.addEventListener('load', searchEvents);
 
-// Random bad joke generator
+
+// ---- Event listener for generating joke button
+document.getElementById('jokeBtn').addEventListener('click', () => {
+  const jokeDisplay = document.getElementById('jokeDisplay');
+  // Random bad joke generator
 const jokes = [
   "Why don't scientists trust atoms? Because they make up everything!",
   "Why did the scarecrow win an award? Because he was outstanding in his field.",
   "What's orange and sounds like a parrot? A carrot.",
-  "I told my computer I needed a break, and it said 'No problem, I'll go to sleep.'"
+  "I told my computer I needed a break, and it said 'No problem, I'll go to sleep.'",
+  "What do snowmen wear on their heads? Ice caps.",
+  "Why did the turkey join the band? Because it had drumsticks!",
+  "How does Good King Wenceslas like his pizzas? Deep pan, crisp and even.",
+  "What do you call a child who doesn’t believe in Santa? A rebel without a Claus.",
+  "What do you get when you cross a snowman with a vampire? Frostbite!",
+  "What do snowmen eat for lunch? Iceburgers!",
+  "What do Santa’s little helpers learn at school? The elf-abet!",
+  "Who is Santa’s favorite singer? Elf-is Presley!",
+  "What do cats call an aquarium? A sushi bar.",
+  "Why are Christmas trees so bad at sewing? They always drop their needles!",
+  "What’s a pirate’s favourite type of YouTube video? ASM-aaaaaarrr!",
+  "What do you get if you cross Santa with a duck? A Christmas Quacker!",
+  "Why do penguins swim in saltwater? Because pepper makes them sneeze.",
+  "What’s the best Christmas present in the world? A broken drum, you just can’t beat it!",
+  "What do you call a man who claps at Christmas? Santapplause.",
+  "Where do penguins keep their savings? In a snow bank.","Why did the elf bring a ladder? Because the Christmas spirit was high!",
+  "What’s Santa’s favorite type of music? Wrap!",
+  "Why don’t snowmen ever get lonely? Because they have lots of cool friends!",
+  "Why did the reindeer stay calm during the storm? Because it knew how to keep its cool!",
+  "What do you call an old snowman? Water!",
+  "Why did the Christmas tree go to the barber? It needed a trim-mas!",
+  "What do you get when you cross a bell with a skunk? Jingle smells!",
+  "Why did the gingerbread man go to school? Because he wanted to be a smart cookie!",
+  "What do Santa’s helpers use to clean the floor? A Santa-tizer!",
+  "Why did the Christmas cookie go to therapy? It felt crumby!"
 ];
+; // your jokes array
 
-document.getElementById('jokeBtn').addEventListener('click', () => {
-  const randomIndex = Math.floor(Math.random() * jokes.length);
-  document.getElementById('jokeDisplay').textContent = jokes[randomIndex];
+  // Fade out current joke
+  jokeDisplay.classList.add('fade-out');
+
+  setTimeout(() => {
+    // After fade out, show new joke and fade back in
+    const randomIndex = Math.floor(Math.random() * jokes.length);
+    jokeDisplay.textContent = jokes[randomIndex];
+    jokeDisplay.classList.remove('fade-out');
+  }, 600);  // Duration should match CSS transition time
 });
 
 // ---- BLOG display code 
