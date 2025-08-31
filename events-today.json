@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "London Web Dev Conference",
+    "location": "london",
+    "type": "conference",
+    "url": "https://www.eventbrite.com/e/london-web-dev-conference-123456789",
+    "date": "2025-08-31",
+    "source": "Eventbrite"
+  },
+  {
+    "id": 2,
+    "title": "Oxford JavaScript Meetup",
+    "location": "oxford",
+    "type": "meetup",
+    "url": "https://www.meetup.com/oxford-javascript-meetup/",
+    "date": "2025-08-31",
+    "source": "Meetup"
+  },
+  {
+    "id": 3,
+    "title": "Cardiff Outdoor Cinema",
+    "location": "cardiff",
+    "type": "cinema",
+    "url": "https://www.timeout.com/cardiff/outdoor-cinema-event",
+    "date": "2025-08-31",
+    "source": "Time Out"
+  }
+]

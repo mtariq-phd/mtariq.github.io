@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Maira Tariq - Developer Portfolio</title>
-<link rel="stylesheet" href="styleBioPage.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maira Tariq - Developer Portfolio</title>
+  <link rel="stylesheet" href="styleBioPage.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
 </head>
+
 <body>
 
 <header class="full-width-box">
@@ -14,9 +17,10 @@
   <nav>
     <a href="#about">About Me</a> |
     <a href="#why-course">Why This Course</a> |
-    <a href="#learned">What I’ve Learned</a> |
-    <a href="#showcase">Skill Showcase</a> |
-    <a href="#blog">Blog & Extras</a> |
+    <a href="#learned">What I’ve Learnt</a> |
+    <a href="#showcase">Skills Showcase</a> |
+    <a href="#blog">Blog</a> |
+    <a href="#extras">Extras</a> |
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -30,37 +34,81 @@
   <p>What really gets me fired up is solving tricky problems with a bit of critical thinking and using advanced analytics to tackle healthcare challenges. Right now, I’m excited to take my expertise further by diving into data science and web/app development.</p>
 </section>
 
-<section id="why-course" class="section color-secondary">
-  <h2>Why I Want to Pursue This Course</h2>
-  <blockquote>
-    <p>I have in-depth knowledge and experience in software development and engineering concepts, but I want to update my skills to popular languages like JavaScript, and start creating personal development projects including developing apps and gain practical data science experience using real data and challenges.</p>
-    <p>This course will empower me to build modern applications and push my career and personal growth forward.</p>
-  </blockquote>
+<section id="why-course" class="section">
+  <h2>Why I Want to Do This Bootcamp</h2>
+  <p>With a solid foundation in imaging science, data analytics, and software development, I have continually driven innovations in healthcare through critical problem-solving and advanced modeling.</p>
+  
+  <h3>My Strengths & Achievements</h3>
+  <ul>
+    <li>Experienced in programming (Python, C/C++, Java, JavaScript) and data science tools</li>
+    <li>Expertise in medical imaging and machine learning applied to biomedical research</li>
+    <li>Proven leadership in research projects and collaborating across multi-disciplinary teams</li>
+    <li>Recognized with awards and publications in top scientific forums</li>
+  </ul>
+  
+  <h3>Why Expand into Web and App Development?</h3>
+  <p>I am excited to grow my skills in modern web and app technologies, combining my analytical background with creative software development to build impactful, user-focused solutions.</p>
+  
+  <h3>Impact and Vision</h3>
+  <ul>
+    <li>Building interactive applications to democratise access to biomedical insights</li>
+    <li>Bridging research with practical, scalable software tools</li>
+    <li>Expanding my professional horizons in today’s dynamic tech landscape</li>
+    <li>Fostering innovation by blending creativity and technical expertise</li>
+  </ul>
 </section>
 
 <section id="learned" class="section">
-  <h2>What I Have Learned So Far</h2>
-  <p>Through prompt-based learning using AI tools such as Perplexity.ai, and solving programming challenges on Codewars supported by AI and MDN documentation, I have enhanced my problem-solving skills significantly.</p>
+  <h2>Learning by doing!</h2>
+  <p>Through prompt-based learning using AI tools and solving programming challenges, supported by AI and MDN documentation, I have enhanced my problem-solving skills significantly.
+    <br>
+    <br>
+    My preparation for this bootcamp included programming in <i class="fab fa-square-js"></i>, learning HTML and styling with CSS.
+    <br>
+    <br>
+    This webpage, with its various github iterations, showcases my journey into learning the basics of web development, starting from a basic website with several features I have learnt. I am to make it look <em>awesome</em> right at the end!!
+  </p>
   <button id="showcaseBtn">See Detailed Showcase</button>
+
+  <h3>What I Am Looking Forward To Learn</h3>
+  <ul id="toLearnList">
+      <li>Working on engaging and interesting projects and apps.</li>
+      <li>Making applications which are fun and fucntional.</li>
+    </ul>
+  </article>
+
 </section>
 
 <section id="showcase" class="section techExp">
-  <h2>Detailed Skills & Features Showcase</h2>
+  <h2>Skills Showcase</h2>
 
-  <article>
-    <h3>AI-Powered Prompt Learning</h3>
-    <p>I use AI-driven prompting to accelerate learning and understand complex concepts interactively.</p>
-    <div id="ai-prompt-demo" style="background:#e0f7fa; padding:1em; border-radius:8px;">
-      <label for="userPrompt">Ask me anything: </label>
-      <input type="text" id="userPrompt" placeholder="Type a programming question..." />
-      <button onclick="handlePrompt()">Submit</button>
-      <div id="promptResponse" style="margin-top: 10px; font-style: italic;"></div>
+  <section id="skills-showcase" class="section color-secondary">
+  <!-- Two columns for skills -->
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 220px;">
+      <h3>Frontend</h3>
+      <ul>
+        <li>HTML <small>(Comfortable)</small></li>
+        <li>CSS <small>(Comfortable)</small></li>
+        <li>JavaScript <small>(Proficient)</small></li>
+      </ul>
     </div>
-  </article>
+    <div style="flex: 1; min-width: 220px;">
+      <h3>Tools & Platforms</h3>
+      <ul>
+        <li>Git <small>(Comfortable)</small></li>
+        <li>Visual Studio Code <small>(Proficient)</small></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
+<!-- Code Example Section -->
   <article>
-    <h3>Codewars Problem Solving</h3>
-    <p>Here are some challenges I have completed:</p>
+    <h3>Sample Code Challenge</h3>
+      <p>
+    Here's is an example of a challenge I completed. Explore my <a href="https://www.codewars.com/users/YourProfile" target="_blank" rel="noopener noreferrer">Codewars profile</a> for further coding challenge solutions.
+  </p>
     <pre><code>// Example: Find unique string in array
 function findUniq(arr) {
   const normalize = str =&gt; [...new Set(str.toLowerCase().replace(/\s+/g, '').split(''))].sort().join('');
@@ -71,39 +119,154 @@ function findUniq(arr) {
 }</code></pre>
   </article>
 
-  <article>
-    <h3>Real-Time Data Fetch & Filtration Demo</h3>
-    <input type="text" id="filterInput" placeholder="Type to filter fruits..." />
-    <ul id="fruitList">
-      <li>Apple</li>
-      <li>Banana</li>
-      <li>Orange</li>
-      <li>Mango</li>
-      <li>Strawberry</li>
-      <li>Grapes</li>
+    <article>
+    <h3>AI-Powered Prompt Learning</h3>
+    <p>I use AI-driven prompting to accelerate learning and understand complex concepts interactively.</p>
+    <p><em>NOTE:</em> this section is not as intended as i didn't have time to incorporate prompt-based learning into the page.</p>
+    <div id="ai-prompt-demo" style="background:#e0f7fa; padding:1em; border-radius:8px;">
+      <label for="userPrompt">Ask me about a programming language: </label>
+      <input type="text" id="userPrompt" placeholder="Language you want information on..." />
+      <button onclick="handlePrompt()">Submit</button>
+      <div id="promptResponse" style="margin-top: 10px; font-style: italic;"></div>
+    </div>
+  </article>
+
+   <article>
+    <h3>Pixel Panic: obstacle avoidanve game</h3>
+    <p><em>Pixel Panic</em> is a charmingly simple yet surprisingly addictive obstacle avoidance game where you steer a tiny pixel block left and right to dodge a relentless barrage of falling obstacles. Starting with 5 lives, the challenge ramps up across three levels as the swarm grows denser and speeds pick up, testing your reflexes and nerves. With its retro pixel vibe and no-nonsense mechanics, it’s the perfect quick fix for a burst of casual gaming fun—easy to pick up, tough to put down, and guaranteed to send your heart racing in the best pixelated panic.</p>
+    <div class="image-row">
+      <figure>
+        <img src="images/PixelPanic/PP-Game_Level1.png" alt="Gameplay Screenshot" />
+        <figcaption>Gameplay Screenshot</figcaption>
+      </figure>
+      <figure>
+        <img src="images/PixelPanic/PP-Game_YouWon.png" alt="You Won Screenshot" />
+        <figcaption>"You Won" Screenshot</figcaption>
+      </figure>
+      <figure>
+        <img src="images/PixelPanic/PP-Game_GameOver.png" alt="Game Over Screenshot" />
+        <figcaption>"Game Over" Screenshot</figcaption>
+      </figure>
+    </div>
+    
+    <h4>Aims of the game</h4>
+
+      <ul id="game-features">
+        <li>Player movement (left/right with Arrow keys).</li>
+        <li>Obstacles fall from the top at increasing frequency & speed.</li>
+        <li>ALives system (5 hearts) disappears when hit; collision causes temporary fade effect.</li>
+        <li>3 Levels:
+          <ul>
+            </li>Level 1: slower obstacles, fewer spawns.</li>
+            </li>Level 2: more spawns.</li>
+            </li>Level 3: faster obstacles.</li>
+          </ul>
+        </li>
+         <li>Game Over condition when lives reach 0.</li>
+        <li>Transition messages between levels.</li>
+    </ul>
+
+    <h4>Featsure to add</h4>
+    <ul id="game-features-to-add">
+      <li>Add score counter (points based on survival or collected stars).</li>
+      <li>Add gems/stars collectible with ArrowUp.</li>
+      <li>Add Leader board / High score using localStorage.</li>
+      <li>Add Restart button after Game Over.</li>
     </ul>
   </article>
 
   <article>
-    <h3>Planned Features</h3>
+    <h3>Planned Webpage additions and featsures</h3>
     <ul>
-      <li>Regular blog posts with insights and updates</li>
-      <li>Random joke generator for fun interaction</li>
+      <li>Improve the game - work on it to make it more fun! Ask gamers in know!</li>
+      </li>Regular blog posts with insights and updates
+      <ul>
+            <li>Start writing some text on daily updates.</li>
+            <li>Learn how to format blogs, including display, archiving old ones and putting latest one on main page.</li>
+      </ul>
+      <li>Add the real-time data fetch section with events "nearby". use typical websites (e.g. look for local council/events pages), but also general google search.</li>
+      <li>Improve the structure of the page - make it more effective, but keep simple & effective!</li>
+      <li>Improve the icons and graphics - start with linking to freely available ones, if have time, try to draw!</li>
+      <li>Include more complex examples in the showacse for AI based learning</li>
+      <li>Showcase/host the webpage, rather than jsut have the source code appear.</li>
+      <li>Random joke generator for fun interaction - lookup random jokes in a "list" or generate using an AI? </li>
+        <ul>
+          <li>AI based may require some additional prompts (see <a href="https://www.turing.ac.uk/blog/we-asked-chatgpt-create-some-christmas-cracker-jokes-heres-what-happened" target="_blank" rel="noopener noreferrer">this blog</a> from the Alan Turing Institute)</li>
+          <li><strong>BUT</strong>, might be able to use a pre-trained AI model & give some prompts for this (keep a list of previous jokes) - MAYBE!</li>
+        </ul>
+      <li>Improve the look of the page by creating advanced CSS elements.</li>
       <li>Animated page elements to improve user engagement</li>
     </ul>
   </article>
 </section>
 
-<section id="blog" class="section">
-  <h2>Blog & Extras</h2>
+<section id="blog-section" class="section">
+  <h2>Blog - making web pages and apps!</h2>
+  <article id="currentBlog" tabindex="0" aria-live="polite" style="margin-bottom: 1.5em;"></article>
+  <div>
+    <h3>Older Posts</h3>
+    <ul id="olderBlogsList" aria-label="List of older blog posts" tabindex="0" style="list-style: none; padding-left: 0;"></ul>
+  </div>
+
+  <div>
+    <label for="blogSelect">Select a blog:</label>
+    <select id="blogSelect" aria-label="Select blog post to read">
+      <!-- Options dynamically injected here -->
+    </select>
+  </div>
+</section>
+
+<section id="extras" class="section">
+  <h2>Extras</h2>
+  
+  <!-- search engine -->
+  <h3>Search Events</h3>
+  <input type="text" id="eventTypeInput" placeholder="Type events like outdoor family activities, cinema, market ..." aria-label="Event Type Keywords" />
+  
+  <select id="locationSelect" aria-label="Select location">
+    <option value="">All locations</option>
+    <option value="london">London</option>
+    <option value="oxford">Oxford</option>
+    <option value="manchester">Manchester</option>
+    <option value="birmingham">Birmingham</option>
+    <option value="cardiff">Cardiff</option>
+  </select>
+  
+  <button id="searchButton">Search</button>
+  <div id="searchResults" aria-live="polite" style="margin-top:1em;"></div>
+
+  <!-- Random code generator -->
+  <h3>Click to hear a <strong>bad</strong> joke</h3>
   <button id="jokeBtn">Tell me a bad joke</button>
   <p id="jokeDisplay" style="margin-top: 1em; font-style: italic;"></p>
+
+    <!-- Gallery of my travel pictures -->
+  <h3>Some travel pictures</h3>
+  <div id="gallery">
+  </div>
+
 </section>
 
 <section id="contact" class="section">
-  <h2>Contact & GitHub</h2>
-  <p>You can view the source code for this website on <a href="https://github.com/mtariq-phd/" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-  <p>Feel free to reach out: <a href="mailto:maira_tariq@icloud.com">here</a></p>
+  <h2>Links and contact</h2>
+
+  <p>View the source code for this website on       
+    <a href="https://github.com/mtariq-phd/" target="_blank" rel="noopener noreferrer" title="Visit GitHub Profile" style="font-size:24px;">
+    <i class="fab fa-github-alt"></i>
+    </a>
+  </p>
+  <p>Check out my CodeWars  
+    <a href="https://www.codewars.com/users/mtariq-phd" target="_blank" rel="noopener noreferrer" title="Visit GitHub Profile">
+    profile</a>
+  </p>
+  <p>Feel free to reach out: <!--<a href="mailto:maira_tariq@icloud.com">here</a></p>-->
+      <a href="mailto:maira_tariq@icloud.com" title="Send Email" style="font-size:24px; margin-right:15px;margin-left:15px;">
+      <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/mtariqphd/" target="_blank" rel="noopener noreferrer" title="Visit LinkedIn Profile" style="font-size:24px;">
+      <i class="fab fa-linkedin"></i>
+      </a>
+  </p>
 </section>
 
 </main>

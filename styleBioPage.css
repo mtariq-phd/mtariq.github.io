@@ -1,18 +1,59 @@
+
+/* Responsive base font and background */
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1em 1.5em;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
 /* Section stylings */
 .section {
   background: white;
-  margin: 2em auto;
+  margin: 2em 0;
   padding: 1.5em 2em;
   max-width: 900px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* smooth transition to current section */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings with bold weights and clear separations */
 .section h2 {
-  border-bottom: 3px solid #0f85b4;
-  padding-bottom: 0.3em;
-  margin-bottom: 1em;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.8em;
   color: #004466;
+  border-bottom: 3px solid #0f85b4;
+  padding-bottom: 0.2em;
+}
+
+/* Subheadings */
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5em;
+  color: #007bff;
+}
+
+small {
+  font-style: italic;
+  color: #666;
 }
 
 .color-secondary {
@@ -25,18 +66,49 @@ button {
   background-color: #007bff;
   border: none;
   color: white;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  border-radius: 6px;
+  padding: 0.7em 1.3em;
+  font-size: 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  margin-top: 0.5em;
+  margin-top: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
+  transform: scale(1.05);
   background-color: #0056b3;
 }
 
-/* Code block styles */
+@media (max-width: 600px) {
+  .section {
+    padding: 1em;
+    margin: 1em;
+  }
+  .image-row {
+    flex-direction: column;
+  }
+  .image-row img {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+/*e “typing effect” animation or fade effect while content loads dynamically 
+for blogs &/or code samples.
+*/
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Code block styles
+Code Snippet Display with Preformatted Text (HTML + CSS)
+ */
 pre {
   background-color: #f4f4f4;
   padding: 1em;
@@ -44,7 +116,9 @@ pre {
   overflow-x: auto;
   font-family: Consolas, "Courier New", monospace;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 /* Input field */
@@ -58,7 +132,12 @@ input[type="text"] {
   margin-bottom: 0.5em;
 }
 
-/* Navigation styling */
+/* Navigation/links styling */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
 nav a {
   color: #004466;
   text-decoration: none;
@@ -66,6 +145,131 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover {
+nav a:hover, a:focus {
   text-decoration: underline;
+}
+
+.event-result {
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+
+.event-result a {
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.event-result a:hover,
+.event-result a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+#blog-section article, #blog-section ul, #blog-section div {
+  margin-bottom: 1rem;
+}
+
+#older-blogs-list li {
+  cursor: pointer;
+  padding: 0.3rem 0;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#older-blogs-list li:hover, 
+#older-blogs-list li:focus {
+  background-color: #e0f7fa;
+  outline: none;
+}
+
+#blog-select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+  #skills-showcase ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  #skills-showcase li {
+    margin-bottom: 0.5em;
+  }
+  #skills-showcase small {
+    color: #666;
+    font-style: italic;
+    margin-left: 0.5em;
+  }
+  .color-secondary {
+    background: #e6f0ff;
+    border-left: 6px solid #007bff;
+    padding: 1em;
+    border-radius: 8px;
+  }
+  .skills-category {
+    margin-bottom: 1em;
+  }
+
+  #gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+#gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#gallery::after {
+  content: "";
+  width: 350px;
+}
+
+.image-row {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+.image-row figure {
+  flex: 1;
+  max-width: 32%;
+  margin: 0;
+  text-align: center;
+}
+
+.image-row img {
+  width: 100%;
+  height: 400px;              /* fixed height for uniformity */
+  object-fit: cover;          /* crops or scales image to cover area without distortion */
+  border-radius: 8px;
+  display: block;
+}
+
+.image-row figcaption {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
 }
